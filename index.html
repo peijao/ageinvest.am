@@ -1,25 +1,153 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgeInvest</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: #000; /* Чёрный фон на случай пустот */
-    }
+<html lang="hy">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AGE Invest — Մենք պարզապես կառուցում ենք ձեր նոր տունը</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Навигация -->
+    <header class="bg-white shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-indigo-600">AGE Invest</h1>
+        <nav class="space-x-6 text-sm font-medium">
+          <a href="#about" class="hover:text-indigo-600" data-lang-key="navAbout">Ընկերության մասին</a>
+          <a href="#projects" class="hover:text-indigo-600" data-lang-key="navProjects">Նախագծեր</a>
+          <a href="#contact" class="hover:text-indigo-600" data-lang-key="navContact">Կապ</a>
+        </nav>
+        <select id="language-select" class="ml-6 p-1 border rounded text-sm">
+          <option value="hy">Հայերեն</option>
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </header>
 
-    body {
-      background: url('image.jpg') no-repeat center center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  </style>
-</head>
-<body>
-</body>
+    <!-- Главный блок -->
+    <section class="bg-indigo-50 py-24 text-center">
+      <h2 id="slogan" class="text-4xl md:text-5xl font-extrabold mb-4" data-lang-key="slogan">Մենք պարզապես կառուցում ենք ձեր նոր տունը</h2>
+      <p id="main-desc" class="text-lg text-gray-600 max-w-xl mx-auto" data-lang-key="mainDesc">
+        AGE Invest-ը ժամանակակից շինարարական ընկերություն է՝ կենտրոնացած ձեր երազանքի տան ստեղծման վրա։
+      </p>
+    </section>
+
+    <!-- О компании -->
+    <section id="about" class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h3 id="about-title" class="text-3xl font-bold mb-6" data-lang-key="aboutTitle">Ընկերության մասին</h3>
+        <p id="about-text" class="text-gray-700 text-lg" data-lang-key="aboutText">
+          Մենք իրականացնում ենք բնակելի և կոմերցիոն նախագծեր Հայաստանում՝ ստեղծելով բնակության և բիզնեսի համար տարածքներ։ Յուրաքանչյուր շենք ներդրում է ապագայի համար։
+        </p>
+      </div>
+    </section>
+
+    <!-- Проекты -->
+    <section id="projects" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h3 id="projects-title" class="text-3xl font-bold text-center mb-12" data-lang-key="projectsTitle">Arma Town Տան նախագիծը</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white shadow rounded-lg p-6 text-center">
+            <h4 class="font-semibold text-xl mb-4" data-lang-key="schemaTitle">Սխեմա տների համար</h4>
+            <div class="bg-gray-100 h-48 flex items-center justify-center" data-lang-key="schema1">[Սխեմա տուն 1]</div>
+          </div>
+          <div class="bg-white shadow rounded-lg p-6 text-center">
+            <h4 class="font-semibold text-xl mb-4" data-lang-key="schemaTitle">Սխեմա տների համար</h4>
+            <div class="bg-gray-100 h-48 flex items-center justify-center" data-lang-key="schema2">[Սխեմա տուն 2]</div>
+          </div>
+          <div class="bg-white shadow rounded-lg p-6 text-center">
+            <h4 class="font-semibold text-xl mb-4" data-lang-key="schemaTitle">Սխեմա տների համար</h4>
+            <div class="bg-gray-100 h-48 flex items-center justify-center" data-lang-key="schema3">[Սխեմա տուն 3]</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h3 id="contact-title" class="text-3xl font-bold mb-6" data-lang-key="contactTitle">Կապ</h3>
+        <p id="contact-address" class="text-gray-700 mb-2" data-lang-key="contactAddress">Երևան, Հայաստան</p>
+        <p id="contact-phone" class="text-gray-700 mb-2" data-lang-key="contactPhone">+374 (44) 304-206</p>
+        <p id="contact-email" class="text-gray-700" data-lang-key="contactEmail">info@ageinvest.am</p>
+      </div>
+    </section>
+
+    <script>
+      const translations = {
+        hy: {
+          navAbout: "Ընկերության մասին",
+          navProjects: "Նախագծեր",
+          navContact: "Կապ",
+          slogan: "Մենք պարզապես կառուցում ենք ձեր նոր տունը",
+          mainDesc: "AGE Invest-ը ժամանակակից շինարարական ընկերություն է՝ կենտրոնացած ձեր երազանքի տան ստեղծման վրա։",
+          aboutTitle: "Ընկերության մասին",
+          aboutText: "Մենք իրականացնում ենք բնակելի և կոմերցիոն նախագծեր Հայաստանում՝ ստեղծելով բնակության և բիզնեսի համար տարածքներ։ Յուրաքանչյուր շենք ներդրում է ապագայի համար։",
+          projectsTitle: "Arma Town Տան նախագիծը",
+          schemaTitle: "Սխեմա տների համար",
+          schema1: "[Սխեմա տուն 1]",
+          schema2: "[Սխեմա տուն 2]",
+          schema3: "[Սխեմա տուն 3]",
+          contactTitle: "Կապ",
+          contactAddress: "Երևան, Հայաստան",
+          contactPhone: "+374 (44) 304-206",
+          contactEmail: "info@ageinvest.am",
+        },
+        ru: {
+          navAbout: "О компании",
+          navProjects: "Проекты",
+          navContact: "Контакты",
+          slogan: "Мы просто строим ваш новый дом",
+          mainDesc: "AGE Invest — современная строительная компания, сосредоточенная на создании дома вашей мечты.",
+          aboutTitle: "О компании",
+          aboutText: "Мы реализуем жилые и коммерческие проекты в Армении, создавая пространства для жизни и бизнеса. Каждый проект — инвестиция в будущее.",
+          projectsTitle: "Проект дома Arma Town",
+          schemaTitle: "Схема домов",
+          schema1: "[Схема дома 1]",
+          schema2: "[Схема дома 2]",
+          schema3: "[Схема дома 3]",
+          contactTitle: "Контакты",
+          contactAddress: "Ереван, Армения",
+          contactPhone: "+374 (44) 304-206",
+          contactEmail: "info@ageinvest.am",
+        },
+        en: {
+          navAbout: "About Us",
+          navProjects: "Projects",
+          navContact: "Contact",
+          slogan: "We simply build your new home",
+          mainDesc: "AGE Invest is a modern construction company focused on building the home of your dreams.",
+          aboutTitle: "About Us",
+          aboutText: "We carry out residential and commercial projects in Armenia, creating spaces for living and business. Each building is an investment in the future.",
+          projectsTitle: "Arma Town House Project",
+          schemaTitle: "House Plan",
+          schema1: "[House Plan 1]",
+          schema2: "[House Plan 2]",
+          schema3: "[House Plan 3]",
+          contactTitle: "Contact",
+          contactAddress: "Yerevan, Armenia",
+          contactPhone: "+374 (44) 304-206",
+          contactEmail: "info@ageinvest.am",
+        }
+      };
+
+      const languageSelect = document.getElementById("language-select");
+
+      function updateLanguage(lang) {
+        document.querySelectorAll("[data-lang-key]").forEach(el => {
+          const key = el.getAttribute("data-lang-key");
+          if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+          }
+        });
+      }
+
+      languageSelect.addEventListener("change", e => {
+        updateLanguage(e.target.value);
+      });
+
+      // Установим язык по умолчанию
+      updateLanguage("hy");
+    </script>
+  </body>
 </html>
